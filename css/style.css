@@ -1,0 +1,906 @@
+@charset "utf-8";
+
+
+
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+header, section, article, aside, nav, main, footer{display: block;} 
+header:after, section:after, article:after, aside:after, nav:after, main:after, footer:after{content:""; display: block; clear: both;}/*display:flex; 선언을 했다면 사용하지 말 것!*/
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+.clear{clear: both;}
+
+
+/*header_part*/
+/*제일큰문제점은 꽉찬화면이 안되는점?*/
+header#ex_02{border-top:1px solid #000; background: #f6f5ef; position: relative;}
+header#ex_02 .wrap{width: 1140px; margin: 0 auto; padding: 0 20px;}
+
+header#ex_02 .wrap:after{content:""; display: block; clear: both;}
+
+header#ex_02 .wrap .logo{float: left; padding: 22px 0;}
+header#ex_02 .wrap .logo a{display: block;}
+header#ex_02 .wrap .logo a img{display: block;height: 76px;}
+
+header#ex_02 .wrap .menu{float: right;}
+
+header#ex_02 .wrap .menu .top{height: 54px; background: #f6f5ef;}
+header#ex_02 .wrap .menu .top ul{float: right;padding: 20px 0;}
+header#ex_02 .wrap .menu .top ul:after{content:""; display: block; clear: both;}
+header#ex_02 .wrap .menu .top ul li{float: left; padding: 0 14px; line-height: 1; border-right: 1px solid #777;}
+header#ex_02 .wrap .menu .top ul li a{display: block; font-size: 14px; color:#a7a7a3; }
+header#ex_02 .wrap .menu .top ul li:last-child a{border: none;}
+
+header#ex_02 .wrap .menu .main{height: 70px; background: #f6f5ef;}
+header#ex_02 .wrap .menu .main > ul{}
+header#ex_02 .wrap .menu .main > ul > li{float: left;}
+header#ex_02 .wrap .menu .main > ul > li > a{display: block; height: 66px; padding: 20px 20px 0; color: #a7a7a3; font-size: 14px;}
+header#ex_02 .wrap .menu .main > ul > li:hover > a{
+    background-color: #2c2a29;
+    color: #41521a;
+    vertical-align: baseline;
+}
+header#ex_02 .wrap .menu .main > ul > li > .sub_frame{background: #2c2a29; position: absolute; width: 100%; left:0; max-height: 0;
+     overflow: hidden; }
+header#ex_02 .wrap .menu .main > ul > li:hover > .sub_frame{
+    max-height: 500px;
+    transition: mex-height 1s;
+}
+header#ex_02 .wrap .menu .main > ul > li > .sub_frame a{
+    font-size: 14px;
+    color: #51504f;
+    line-height: 30px;
+
+}
+header#ex_02 .wrap .menu .main > ul > li > a {
+    color: #b3b3b2;
+ 
+}
+header#ex_02 .wrap .menu .main > ul > li > .sub_frame > .sub_wrap{width: 1140px; margin: 0 auto; padding: 0 20px; font-size: 0;}
+
+header#ex_02 .wrap .menu .main > ul > li > .sub_frame > .sub_wrap > .sub_box{width: 20%; display: inline-block; vertical-align: top;
+     font-size: 14px; padding: 20px 0  20px;}
+header#ex_02 .wrap .menu .main > ul > li > .sub_frame > .sub_wrap > .sub_box > .sub_title{
+    color: #fff;
+}
+
+
+
+/*main_part*/
+/*main 문제점 - 100%했을때는 괜칞는데
+75% -커피이미지 하고 커피text,자세히보기  겹침-
+수정해야될점은 -애니메이션 부여 1. (커피이미지)하나씩나오게
+                            2.자세히보기커피이미지다끝나고 자세히보기나올것.
+*/
+#main{}
+#main .wrap{
+width: 100%;
+height: 512px;
+    background-image: url(../img/2021_cherryblossom_bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+  margin: 0 auto;
+ 
+}/*bagroundimg*/
+#main .wrap .title{
+    position: relative;
+    left: 20%;
+    bottom: -40px;
+}
+#main .wrap .title .img{
+
+
+}/*text-img*/
+#main .wrap .button{
+    border-radius: 4px;
+    border: 1px solid #f9e9e4;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: #edc3b7;
+    position: absolute;
+    left: 27%;
+    bottom: 62%;
+    cursor: pointer;
+    }
+#main .wrap .button a{
+    color: #f9e9e4;
+    font-size: 14px;
+    line-height: 13px;  
+    
+}
+#main .wrap  .button:hover a{
+    background-color: #935649;
+    color: #fff;
+    border-color: #935649;
+}
+#main .wrap .cont{}
+#main .wrap .cont .cont_box{}
+#main .wrap .cont .cont_box .cont_title{
+    position: relative;
+    right: -41%;
+    bottom: -198px;
+}
+#main .wrap .cont .cont_box .cont_title img{
+    width: 146px;
+    height: 79px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#main .wrap .cont .cont_box .cont_img{
+    position: absolute;
+    right: 42%;
+}
+#main .wrap .cont .cont_box .cont_img img{
+    width: 200px;
+    height: 277px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#main .wrap .cont .cont_box .cont_title_01{
+    position: relative;
+    right: -57%;
+    top: -138px;
+}
+#main .wrap .cont .cont_box .cont_title_01 img{
+    width: 146px;
+    height: 79px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#main .wrap .cont .cont_box .cont_img_01{
+    position: absolute;
+    right: 33%;
+    top: 33%;
+}
+#main .wrap .cont .cont_box .cont_img_01 img{
+    width: 200px;
+    height: 277px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#main .wrap .cont .cont_box .cont_title_02{
+    position: relative;
+    right: -67%;
+    top: -188px;
+}
+#main .wrap .cont .cont_box .cont_title_02 img{
+    width: 146px;
+    height: 79px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#main .wrap .cont .cont_box .cont_img_02{
+    position: absolute;
+    right: 23%;
+    top: 37%;
+}
+#main .wrap .cont .cont_box .cont_img_02 img{
+    width: 200px;
+    height: 277px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+/*중간백그라운드*/
+/*문제점 - 꽉찬 화면 은 괜찮음 .
+75%으로 했을때는  문제가발생이됨.
+1.로고는 괜찮음
+2. 제목이 왼쪽으로감.
+3. 버튼이 왼쪽으로 감.
+*/
+#main .wrap .main_center{
+    width: 100%;
+    height: 50px;
+    background-image: url(../img/line_notice_bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    bottom: -24%;
+}
+/*왼쪽파트*/
+#main .wrap .main_center .left_title{}
+#main .wrap .main_center .left_title ul{
+    float: left;
+
+}
+#main .wrap .main_center .left_title ul li{
+    float: left;
+    padding: 9px 0;
+    text-align: center;
+    color: #999999;
+    position: relative;
+    left: 55%;
+    bottom: -10px;
+}
+#main .wrap .main_center .left_title ul li a{
+ color: #606060;
+ margin: 10px;
+}
+#main .wrap .main_center .icon_01{
+    position: absolute;
+    right: 45%;
+    bottom: 3px;
+    cursor: pointer;
+}
+#main .wrap .main_center .icon_01 img{
+    width: 30px;
+    height: 30px;
+    background-position: 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+}
+ 
+/*오른쪽파트*/
+
+#main .wrap .main_center .right_title{
+position: relative;
+right: -41%;
+bottom: -15px;
+}
+#main .wrap .main_center .right_title h3{}
+#main .wrap .main_center .icon_02{
+    position: absolute;
+    right: 18%;
+    bottom: 3px;
+}
+#main .wrap .main_center .icon_02 img{
+    width: 30px;
+    height: 30px;
+    background-position: 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+}
+#main .wrap .main_bottom{
+    width: 100%;
+    height: 230px;
+    background-image: url(../img/menu_bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    bottom: -24%;
+    padding: 60px;
+}
+#main .wrap .main_bottom .bottom_logo{
+    display: block;
+}
+#main .wrap .main_bottom .bottom_logo a{
+display: block;
+position: absolute;
+right: 71%;
+bottom: 20%;
+}
+#main .wrap .main_bottom .bottom_logo a img{
+    width: 176px;
+    height: 152px;
+}
+#main .wrap .main_bottom .top_text{}
+#main .wrap .main_bottom .top_text h1{
+    font-size: 36px;
+    color: #e9eceb;
+    text-align: center;
+    position: relative;
+    right: -28px;
+    top: -41px;
+    
+}
+#main .wrap .main_bottom .top_text ul{
+ 
+}
+#main .wrap .main_bottom .top_text ul:last-child{
+ 
+}
+#main .wrap .main_bottom .top_text ul li{
+         position: relative;
+        right: -32%;
+        top: -33px;
+}
+#main .wrap .main_bottom .top_text ul li a{
+    color: #d1d6d5;
+  
+}
+#main .wrap .main_bottom .top_button{}
+#main .wrap .main_bottom .top_button .left_button{
+    width: 75px;
+    height: 29px;
+    border: 1px solid #00704a;
+    border-radius: 4px;
+    background-color: #00704a;
+    text-align: center;
+    position: absolute;
+    right: 29%;
+    top: 39%;
+    cursor: pointer;
+}
+
+#main .wrap .main_bottom .top_button .left_button h3{
+    font-size: 14px;
+    line-height: 30px;
+    color: #c3cac9;
+}
+#main .wrap .main_bottom .top_button .right_button{
+    width: 66px;
+    height: 29px;
+    border: 1px solid #697b76;
+    border-radius: 4px;
+    background-color: #1e3932;
+    text-align: center;
+    position: absolute;
+    right: 25%;
+    top: 39%;
+    cursor: pointer;
+}
+#main .wrap .main_bottom .top_button .right_button h3{
+    font-size: 14px;
+    line-height: 30px;
+    color: #c3cac9;
+}
+#main .wrap .main_bottom .line_part{
+    width: 57%;
+     border-bottom: 1px solid #a4a4a4;
+     position: relative;
+     right: -29%;
+}
+#main .wrap .main_bottom .bottom_text{
+    position: relative;
+    right: -32%;
+    top: 22px;
+}
+#main .wrap .main_bottom .bottom_text h3{
+    color: #d1d6d5;
+    font-size: 14px;
+}
+#main .wrap .main_bottom .bottom_button{
+    width: 156px;
+    height: 30px;
+    border: 1px solid #697b76;
+    border-radius: 4px;
+    background-color: #1e3932;
+    position: absolute;
+    right: 25%;
+    top: 75%;
+    cursor: pointer;
+
+}
+#main .wrap .main_bottom .bottom_button a{
+    font-size: 14px;
+    color: #c3cac9;
+    text-align: center;
+    margin: 10px;
+}
+/*center*/
+/*문제점 
+100%으로 했을때는 괜찮은데 
+75%했을때는 문제가 발생이 됨
+커피이미지가 위에올라간다.
+수정해야될점-1.애니메이션부여 커피이미지 오른쪽오구
+2.텍스트왼쪽
+
+
+*/
+#center{}
+#center .wrap{
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/2021_spring_bean_bg.jpg);
+    background-position: 100% 100%;
+    background-size:cover;
+}
+#center .wrap .left_img{
+
+}
+#center .wrap .left_img img{
+    width: 255px;
+    height: 255px;
+    background-position: 50% 50%;
+    background-size: cover;
+position: absolute;
+right: 52%;
+bottom: -28%;
+}
+#center .wrap .center_text{
+    position: relative;
+    right: -49%;
+    top: 60%;
+
+}
+#center .wrap .center_text img{
+    width: 238px;
+    height: 112px;
+    background-position: 50% 50%;
+    background-size: cover;
+
+}
+#center .wrap .center_button{
+    width: 100px;
+    height: 31px;
+    border: 1px solid #b6a2a4;
+    border-radius: 4px;
+    position: absolute;
+    right: 42%;
+    bottom: -23%;
+    cursor: pointer;
+}
+#center .wrap .center_button a{
+    color: #b6a2a4;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 14px;
+}
+/*center_part*/
+/*문제점
+100%으로했을때는괜찮은데
+75% 했을때는 문제가 발생이됨
+1.커피텍스트가 위로 올라가게됨.
+딴거는괜찮음.
+수정해야될점은
+애니메이션  커피티가조금있다가나올것
+
+*/
+#center_part{}
+#center_part .wrap{
+    width: 100%;
+    height: 310px;
+    background-image: url(../img/reserve_costarica_bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#center_part .wrap .text_part{
+position: absolute;
+right: 56%;
+bottom: -52%;
+}
+#center_part .wrap .text_part img{
+    width: 321px;
+    height: 130px;
+}
+#center_part .wrap .button{
+    width: 98px;
+    height: 29px;
+    border: 1px solid #c58b6b;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    right: -43%;
+    bottom: -60%;
+    cursor: pointer;
+}/*cursor: pointer; 작동이 안됨.*/
+#center_part .wrap .button a{
+    font-size: 14px;
+    color: #c88f6e;
+    margin: 10px;
+  
+}
+#center_part .wrap .img_part{
+    position: relative;
+    right: -31%;
+
+
+}
+#center_part .wrap .img_part img{
+    width: 69%;
+    height: 279px;
+}
+#center_part .wrap .top_img_part{
+    position: relative;
+    right: -86%;
+    top: -101%;
+}
+#center_part .wrap .top_img_part img{
+    width: 261px;
+    height: 115px;
+}
+/*bottm_part*/
+/*
+
+
+
+수정해야될점은 
+애니메이션부여
+큰제목 부제목 오른쪽으로나오게할것
+
+*/
+#center_part .wrap .bottom_part{
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/fav_prod_bg_new.jpg);
+    background-position: 100% 100%;
+    background-size: cover;
+    position: relative;
+    top: -40%;
+}
+#center_part .wrap .bottom_part .txt_part{
+    position: absolute;
+    bottom: 50%;
+    right: 70%;
+}
+#center_part .wrap .bottom_part .txt_part img{
+    width: 204px;
+    height: 165px;
+}
+#center_part .wrap .bottom_part .tt_part{
+    position: absolute;
+    right: 70%;
+    bottom: 31%;
+}
+#center_part .wrap .bottom_part .tt_part img{
+    width: 300px;
+    height: 116px;
+}
+#center_part .wrap .bottom_part .tt_part h3{
+    color: #fff;
+    font-size: 14px;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+  line-height: 26px;
+  text-align: center;
+  position: relative;
+  right: -108%;
+  bottom: -28px;
+  cursor: pointer;
+}
+#center_part .wrap .bottom_part .img_part{
+    position: relative;
+    right: -41%;
+    bottom: -22%;
+}
+#center_part .wrap .bottom_part .img_part img{
+    width: 671px;
+    height: 457px;
+}
+/*rivew*/
+/*
+
+
+
+수정해야될점은 
+애니메이션부여
+text왼쪽나오게할것
+
+*/
+#center_part .wrap  .rivew{
+    width: 1904px;
+    height: 695px;
+    background-color: #ffff;
+    position: relative;
+    top: -40%;
+}
+#center_part .wrap  .rivew img{
+    width: 469px;
+    height: 515px;
+    position: absolute;
+    right: 52%;
+    bottom: 60px;
+}
+#center_part .wrap .text_01{
+    position: relative;
+    right: -32%;
+    bottom: -57%;
+}
+#center_part .wrap .text_01 img{
+    width: 489px;
+    height: 48px;
+}
+#center_part .wrap .text_box{
+    position: relative;
+    right: -55%;
+    bottom: -69%;
+}
+#center_part .wrap .text_box h3{
+    font-size: 18px;
+    color:#8e8e8e;
+
+}
+/*story*/
+
+/*
+
+
+
+수정해야될점은 
+애니메이션부여
+텍스트 왼쪽으로나오게할것
+
+*/
+#center_part .wrap .story{
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/store_bg.jpg);
+}
+#center_part .wrap .story .img_01{
+    position: relative;
+    right: -24%;
+}
+#center_part .wrap .story .img_01 img{
+width: 366px;
+height: 312px;
+}
+#center_part .wrap .story .img_02{
+    position: relative;
+    right: -37%;
+    bottom: 43%;
+}
+#center_part .wrap .story .img_02 img{
+    width: 228px;
+    height: 228px;
+}
+#center_part .wrap .story .bg_img{
+position: relative;
+right: -44%;
+top: -137%;
+
+
+}
+#center_part .wrap .story .bg_img img{
+    width: 290px;
+    height: 98px;
+    background-position: 100% 100%;
+    background-size: cover;
+    z-index: 1;
+}
+#center_part .wrap .story .right_tt_part{
+    position: relative;
+    right: -57%;
+    bottom: 131%;
+}
+#center_part .wrap .story .right_tt_part img{
+    width: 297px;
+    height: 61px;
+}
+#center_part .wrap .story .bottom_tt{
+    position: relative;
+    right: -57%;
+    bottom: 127%;
+}
+#center_part .wrap .story .bottom_tt img{
+    width: 297px;
+    height: 61px;
+}
+#center_part .wrap .story .bottom_tt h3{
+    color: #323232;
+    font-size: 14px;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #323232;
+    border-radius: 3px;
+  line-height: 26px;
+  text-align: center;
+  position: relative;
+  right: -10px;
+  bottom: -29px;
+  cursor: pointer;
+}
+
+#center_part .wrap .story .house{
+    position: relative;
+    right: -80%;
+    top:-124%;
+}
+#center_part .wrap .story .house img{
+    width: 186px;
+    height: 85px;
+}
+/*footer*/
+#center_part .footer{
+    width: 100%;
+    height: 550px;
+    background-color: #323232;
+}
+#center_part .footer .left_text{
+    position: relative;
+    right: -22%;
+    bottom:-12%;
+
+}
+#center_part .footer .left_text ul{
+    float: left;
+    
+}
+#center_part .footer .left_text ul li{
+  
+}
+#center_part .footer .left_text ul li a{
+    font-size: 14px;
+    color: #bebdbd;
+}
+#center_part .footer .left_tt{
+    position: relative;
+    right: -30%;
+    bottom: -12%;
+}
+
+#center_part .footer .left_tt ul{
+    float: left;
+    
+}
+#center_part .footer .left_tt ul li{
+  
+}
+#center_part .footer .left_tt ul li a{
+    font-size: 14px;
+    color: #bebdbd;
+}
+#center_part .footer .left_txt{
+    position: relative;
+    right: -37%;
+    bottom:-59px;
+
+}
+#center_part .footer .left_txt ul{
+    float: left;
+    
+}
+#center_part .footer .left_txt ul li{
+  
+}
+#center_part .footer .left_txt ul li a{
+    font-size: 14px;
+    color: #bebdbd;
+}
+#center_part .footer .center_text{
+    position: relative;
+    right: -42%;
+    bottom:-57px;
+
+}
+#center_part .footer .center_text ul{
+    float: left;
+    
+}
+#center_part .footer .center_text ul li{
+  
+}
+#center_part .footer .center_text ul li a{
+    font-size: 14px;
+    color: #bebdbd;
+}
+#center_part .footer .right_tt{
+    position: relative;
+    right: -48%;
+    bottom:-57px;
+}
+#center_part .footer .right_tt ul{
+    float: left;
+    
+}
+#center_part .footer .right_tt ul li{
+  
+}
+#center_part .footer .right_tt ul li a{
+    font-size: 14px;
+    color: #bebdbd;
+}
+#center_part .footer .right_tt .logo{
+    position: relative;
+    right: -174px;
+    bottom:67px;
+}
+/*bottom*/
+#center_part .footer .footer_bottom{
+    position: relative;
+    bottom: -50%;
+}
+#center_part .footer .footer_bottom .img_04{
+    width: 100%;
+    height: 60px;
+background-color: #282828;
+}
+#center_part .footer .footer_bottom .icon{
+    position: absolute;
+    right: 62%;
+    top: 7px;
+}
+#center_part .footer .footer_bottom .icon img{
+    width: 183px;
+    height: 47px;
+}
+#center_part .footer .footer_bottom .icon_02{
+    position: absolute;
+    right: 52%;
+    top: 7px;
+}
+#center_part .footer .footer_bottom .icon_02 img{
+    width: 183px;
+    height: 47px;
+}
+#center_part .footer .footer_bottom .icon_03{
+    position: absolute;
+    right: 42%;
+    top: 7px;
+}
+#center_part .footer .footer_bottom .icon_03 img{
+    width: 183px;
+    height: 47px;
+}
+
+#center_part .footer .footer_bottom .icon_04{
+    position: absolute;
+    right: 32%;
+    top: 7px;
+}
+#center_part .footer .footer_bottom .icon_04 img{
+    width: 183px;
+    height: 47px;
+}
+#center_part .footer .footer_bottom .icon_05{
+    position: absolute;
+    right: 22%;
+    top: 7px;
+}
+#center_part .footer .footer_bottom .icon_05 img{
+    width: 183px;
+    height: 47px;
+}
+#center_part .footer .footer_bottom .icon_06{
+    position: absolute;
+    right: 11%;
+    top: 7px;
+}
+#center_part .footer .footer_bottom .icon_06 img{
+    width: 183px;
+    height: 47px;
+}
+#center_part .footer .footer_bottom .last_text{}
+#center_part .footer .footer_bottom .last_text ul{
+    position: relative;
+    right: 12%;
+    bottom: -36px;
+}
+#center_part .footer .footer_bottom .last_text ul li{
+    display: inline-block;
+    border-right: 1px solid #bebdbd;
+    line-height: 1;
+    padding-left: 10px;
+}
+#center_part .footer .footer_bottom .last_text ul li:last-child{
+    border: none;
+}
+#center_part .footer .footer_bottom .last_text ul li a{
+    font-size: 14px;
+    color: #6e6d6c;
+    margin: 9px;
+}
+#center_part .footer .footer_bottom .last_box{}
+#center_part .footer .footer_bottom .last_box ul{
+    position: relative;
+    right: -8%;
+    bottom: -66px;
+}
+#center_part .footer .footer_bottom .last_box ul li{
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 130px;
+    height: 26px;
+    display: inline-block;
+    cursor: pointer;
+}
+#center_part .footer .footer_bottom .last_box ul li a{
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+#center_part .footer .footer_bottom  .last_txt{}
+#center_part .footer .footer_bottom  .last_txt h3{
+    font-size: 18px;
+    color: #bebdbd;
+    position: absolute;
+    bottom: -111%;
+    right: 20%;
+   
+}
+#center_part .footer .footer_bottom  .last_txt p{
+    font-size: 18px;
+    color: #bebdbd;
+    position: absolute;
+    bottom: -134%;
+    right: 36%;
+}
+
+
+
+
+
